@@ -7,14 +7,22 @@
     <title>Web Profile</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Plugin FA4 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Plugin css animate -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
 </head>
 <style>
     a {
         color: white !important;
+        text-decoration: none;
     }
 
     h1 {
@@ -29,6 +37,17 @@
     li {
         white-space: nowrap;
     }
+
+
+    /* .fade-in-image { 
+        animation: fadeIn 5s; 
+    } */
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
 </style>
 
 <body>
@@ -48,21 +67,24 @@
                         <a href="#" class="nav-link active" aria-current="page">My Profile</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Exp Skill</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Job Experience</a>
+                        <a class="nav-link" href="#expSkill">Exp Skill</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Me</a>
+                        <a class="nav-link" href="#workExp">Job Experience</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#contactMe" tabindex="-1" aria-disabled="true">Contact Me</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container animate__animated animate__backInDown">
             <div class="row">
-                <div class="col-md-7 pt-5 pb-5">
+                <div class="col-md-7 pt-5 pb-5 ">
                     <button class="rounded-pill bg-white text-black p-2">
                         <img src="img/flag.png" height="20" width="20" alt="bendera-indonesia" /> Based On Indonesia
                     </button>
@@ -75,7 +97,7 @@
                         </h1>
                     </div>
 
-                    <p class="text-secondary">
+                    <p class="text-secondary" >
                         Turn Your "What If" into "What Is". Turn Your "Ideas" Into "Reality"
                     </p>
                 </div>
@@ -84,14 +106,18 @@
                 </div>
             </div>
 
-            <div class="row pb-5">
+            <div class="row pb-1" id="">
 
             </div>
         </div>
+
+        <div id="menujuAbout" class="pb-4"></div>
+
+
     </section>
 
     <!-- Bagian About -->
-    <section class=" pb-5">
+    <section class="pb-5" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center fw-bold pt-4 pb-1" style="font-size: 30px;">
@@ -99,20 +125,20 @@
                 </div>
 
                 <div class="col-md-12 text-center pt-2">
-                    <i>I Code Just For Fun</i>
+                    <i>Just a Newbie who learning to Code</i>
                 </div>
             </div>
 
             <div class="row mb-4 mt-3">
-                <div class="col-md-4">
+                <div class="col-md-4" id="aboutKiri">
                     <h4>About Me</h4>
 
                     <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab non voluptates labore dolores minus repellat maiores asperiores, enim eaque necessitatibus eius explicabo molestias adipisci sequi modi iste officia, mollitia laborum.</p>
                 </div>
-                <div class="col-md-4 text-center mt-2">
+                <div class="col-md-4 text-center mt-2" id="aboutTengah">
                     <img src="img/ricardo2.jpg" height="300" width="300" alt="ricardo-wd-22412838-2" class="rounded-pill img-fluid">
                 </div>
-                <div class="col-md-4 ps-5">
+                <div class="col-md-4 ps-5" id="aboutKanan">
                     <h4 class="mb-4">Details</h4>
 
                     <b>Nama : </b>
@@ -125,9 +151,19 @@
                     <p class="mt-2">Kubu Raya, Desa Kapur</p>
 
                     <div>
-                        <i class="fa fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
-                        <i class="fa fa-github" style="font-size: 30px; margin-right: 10px;"></i>
-                        <i class="fa fa-linkedin" style="font-size: 30px; margin-right: 10px;"></i>
+                        <a href="http://www.instagram.com/xii.ricardo" class="text-dark" target="_blank">
+                            <i class="fa fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+                        </a>
+                        <a href="https://github.com/Ric255-r/" class="text-dark">
+                            <i class="fa fa-github" style="font-size: 30px; margin-right: 10px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ricardo-ric-122b29280/" class="text-dark" target="_blank">
+                            <i class="fa fa-linkedin" style="font-size: 30px; margin-right: 10px;"></i>
+                        </a>
+                        <a href="https://wa.me/085650826414" class="text-dark" target="_blank">
+                            <i class="fa fa-whatsapp" style="font-size: 30px; margin-right: 10px;"></i>
+                        </a>
+
                     </div>
 
 
@@ -139,7 +175,7 @@
     </section>
 
     <!-- Bagian Skill Experience -->
-    <section class="p-5 text-white" style="background-color: black;">
+    <section class="p-5 text-white" id="expSkill" style="background-color: black;">
         <div class="container py-4">
             <div class="row">
                 <div class="col-md-12 mb-5 fw-bold text-center" style="font-size: 30px;">
@@ -148,7 +184,7 @@
 
             <div class="row mt-4 text-center pb-5">
                 <div class="col-md-4 text-white" >
-                    <div class="bg-dark mx-2" style="height: 350px;">
+                    <div class="bg-dark mx-2 cardSkill" style="height: 350px;">
                         <div class="py-4 pt-4">
                             <i class="fa fa-globe" style="font-size: 40px;"></i>
                         </div>
@@ -164,7 +200,7 @@
                 </div>
 
                 <div class="col-md-4 text-white bg-black">
-                    <div class="bg-dark mx-2" style="height: 350px;">
+                    <div class="bg-dark mx-2 cardSkill" style="height: 350px;">
                         <div class="py-4 pt-4">
                             <i class="fa fa-laptop" style="font-size: 40px;"></i>
                         </div>
@@ -180,7 +216,7 @@
                 </div>
 
                 <div class="col-md-4 text-white bg-black">
-                    <div class="bg-dark mx-2" style="height: 350px;">
+                    <div class="bg-dark mx-2 cardSkill" style="height: 350px;">
                         <div class="py-4 pt-4">
                             <i class="fa fa-user" style="font-size: 40px;"></i>
                         </div>
@@ -199,8 +235,8 @@
         </div>
     </section>
 
-    <section class="bg-secondary pb-5">
-        <div class="container">
+    <section class="bg-secondary pb-5" id="workExp">
+        <div class="container" >
             <div class="row">
                 <div class="col-md-12 text-center fw-bold pt-5" style="font-size: 30px;">
                     <h2 class="">
@@ -211,7 +247,7 @@
 
                 <div class="col-md-12 pt-4">
                     <div class="card p-5">
-                        <div>
+                        <div class="isiJob">
                             <h5 class="fw-bold">
                                 Warehouse Admin
                             </h5>
@@ -224,7 +260,7 @@
                             </p>
                             <hr>
                         </div>
-                        <div>
+                        <div class="isiJob">
                             <h5 class="fw-bold">
                                 PC Technician
                             </h5>
@@ -235,7 +271,7 @@
                             <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
                             <hr>
                         </div>
-                        <div>
+                        <div class="isiJob">
                             <h5 class="fw-bold">
                                 Admin
                             </h5>
@@ -246,7 +282,7 @@
                             <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
                             <hr>
                         </div>
-                        <div>
+                        <div class="isiJob">
                             <h5 class="fw-bold">
                                 Sales Executive
                             </h5>
@@ -263,35 +299,10 @@
 
                 </div>
             </div>
-
-            <!-- <div class="row mt-4 pb-5">
-                <div class="col-md-5 text-end ps-5">
-                    <p>Feb 2024 </p>
-                </div>
-                <div class="col-md-2 parent">
-                    <ul>
-                        <li class="li">
-                            <p></p>
-                        </li>
-                        <li class="li">
-                            <p></p>
-                        </li>
-                        <li class="li">
-                            <p></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5">
-
-                </div>
-
-
-
-            </div> -->
         </div>
     </section>
 
-    <section class="p-5">
+    <section class="p-5" id="contactMe">
         <div class="container">
             <div class="row mb-5">
                 <h2 class="text-center">Contact Me</h2>
@@ -335,9 +346,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12  text-center">
-                    <i class="fa fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
-                    <i class="fa fa-github" style="font-size: 30px; margin-right: 10px;"></i>
-                    <i class="fa fa-linkedin" style="font-size: 30px; margin-right: 10px;"></i>
+                    <a href="http://www.instagram.com/xii.ricardo" class="text-dark" target="_blank">
+                        <i class="fa fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+                    </a>
+                    <a href="https://github.com/Ric255-r/" class="text-dark">
+                        <i class="fa fa-github" style="font-size: 30px; margin-right: 10px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ricardo-ric-122b29280/" class="text-dark" target="_blank">
+                        <i class="fa fa-linkedin" style="font-size: 30px; margin-right: 10px;"></i>
+                    </a>
+                    <a href="https://wa.me/085650826414" class="text-dark" target="_blank">
+                        <i class="fa fa-whatsapp" style="font-size: 30px; margin-right: 10px;"></i>
+                    </a>
                 </div>
 
                 <div class="col-md-12 text-center py-3">
@@ -354,3 +374,86 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+<!-- Script buat lacak user ngescroll smpe mana -->
+<script src="/noframework.waypoints.js"></script>
+
+<script>
+let cards = document.getElementsByClassName("isiJob");
+let cardsSkill = document.getElementsByClassName("cardSkill")
+
+function delayCardJob(){
+    for (let index = 0; index < cards.length; index++) {
+        cards[index].classList.add('animate__animated');
+        cards[index].classList.add('animate__backInLeft');
+        cards[index].style.setProperty('--animate-duration', `${index + 1.5}s`);
+    }
+}
+
+function delayCardSkill(){
+    for (let i = 0; i < cardsSkill.length; i++) {
+        cardsSkill[i].classList.add('animate__animated');
+        cardsSkill[i].classList.add('animate__bounceInUp');
+        cardsSkill[i].style.setProperty('--animate-duration', `${i + 1.5}s`);
+    }
+}
+
+var waypoint = new Waypoint({
+    element: document.getElementById('workExp'),
+    handler: function(){
+        delayCardJob();
+        setTimeout(() => {
+            for (let index = 0; index < cards.length; index++) {
+                cards[index].classList.remove('animate__animated');
+                cards[index].classList.remove('animate__backInLeft');
+                cards[index].style.removeProperty('--animate-duration');
+            }
+        }, 6000);
+    }
+});
+
+var waypoint2 = new Waypoint({
+    element: document.getElementById('menujuAbout'),
+    handler: function(){
+        let aboutKiri = document.getElementById('aboutKiri');
+        let aboutTengah = document.getElementById('aboutTengah');
+        let aboutKanan = document.getElementById('aboutKanan');
+
+        aboutKiri.classList.add('animate__animated');
+        aboutKiri.classList.add('animate__fadeInLeft');
+
+        aboutTengah.classList.add('animate__animated');
+        aboutTengah.classList.add('animate__fadeIn');
+
+        aboutKanan.classList.add('animate__animated');
+        aboutKanan.classList.add('animate__fadeInRight');
+
+        setTimeout(() => {
+            aboutKiri.classList.remove('animate__animated');
+            aboutKiri.classList.remove('animate__fadeInLeft');
+
+            aboutTengah.classList.remove('animate__animated');
+            aboutTengah.classList.remove('animate__fadeIn');
+
+            aboutKanan.classList.remove('animate__animated');
+            aboutKanan.classList.remove('animate__fadeInRight');
+        }, 3000);
+    }
+});
+
+var waypoint3 = new Waypoint({
+    element: document.getElementById('expSkill'),
+    handler: function(){
+        delayCardSkill();
+
+        setTimeout(() => {
+            for (let index = 0; index < cardsSkill.length; index++) {
+                cardsSkill[index].classList.remove('animate__animated');
+                cardsSkill[index].classList.remove('animate__bounceInUp');
+                cardsSkill[index].style.removeProperty('--animate-duration');
+            }
+        }, 6000);
+    }
+});
+
+</script>
